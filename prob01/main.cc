@@ -16,12 +16,24 @@ const double kTaxRate =0.075;
 double mealCost =0.0;
   double tipPercentage=0.0;
   double result;
+  double taxes;
+  double tip ;
   std::cout<< " please enter meal cost ";
   std::cin>> mealCost;
   std::cout<< " please enter tip percentage ";
   std::cin>>tipPercentage;
-  result=mealCost + ((mealCost +kTaxRate)*(tipPercentage / 100));
-  std::cout << " this is how much you have to pay "<< result<<'\n';
 
+
+  result= mealCost + taxes + tip;
+taxes= mealCost *kTaxRate;
+tip=mealCost *(tipPercentage/100);
+
+  std::cout<< " Restaurant Bill \n";
+  std::cout<< "==========\n";
+  std::cout << " Subtotal : $ "<<mealCost<<std::endl;
+  std:: cout<< " Taxes : $ "<< taxes<<std::endl;
+  std::cout<< " Tip : $ " <<tip<<std::endl;
+std::cout<< "=========\n";
+std::cout<< " total "<<result<<'\n';
 return 0;
 }
