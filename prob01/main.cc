@@ -24,16 +24,22 @@ double mealCost =0.0;
   std::cin>>tipPercentage;
 
 
-  result= mealCost + taxes + tip;
-taxes= mealCost *kTaxRate;
-tip=mealCost *(tipPercentage/100);
+  
+
 
   std::cout<< " Restaurant Bill \n";
   std::cout<< "==========\n";
-  std::cout << " Subtotal : $ "<<mealCost<<std::endl;
-  std:: cout<< " Taxes : $ "<< taxes<<std::endl;
-  std::cout<< " Tip : $ " <<tip<<std::endl;
+  std::cout << " Subtotal : $ "<< std::setprecision(2) <<std::fixed<< mealCost <<std::endl;
+
+
+  taxes = mealCost * kTaxRate;
+  tip = ( tipPercentage / 100)  * mealCost;
+  std:: cout<< " Taxes : $ "<< std::setprecision(2) << std::fixed<<taxes <<std::endl;
+
+  std::cout<< " Tip : $ " << std::setprecision(2) << std::fixed<<tip <<std::endl;
+  
 std::cout<< "=========\n";
-std::cout<< " total "<<result<<'\n';
+result = tip + taxes + mealCost;
+std::cout<< " total "<< result <<std::endl;
 return 0;
 }
