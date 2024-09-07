@@ -15,31 +15,31 @@ int main() {
 const double kTaxRate =0.075;
 double mealCost =0.0;
   double tipPercentage=0.0;
-  double result;
+  double total;
   double taxes;
   double tip ;
-  std::cout<< " please enter meal cost ";
+  std::cout<< "Please input meal cost: ";
   std::cin>> mealCost;
-  std::cout<< " please enter tip percentage ";
+  std::cout<< "Please input tip percentage: ";
   std::cin>>tipPercentage;
 
 
   
 
 
-  std::cout<< " Restaurant Bill \n";
+  std::cout<< "\nRestaurant Bill\n";
   std::cout<< "==========\n";
-  std::cout << " Subtotal : $ "<< std::setprecision(2) <<std::fixed<< mealCost <<std::endl;
+  std::cout << "Subtotal: $"<< std::setprecision(2) <<std::fixed<< mealCost <<std::endl;
 
 
   taxes = mealCost * kTaxRate;
-  tip = ( tipPercentage / 100)  * mealCost;
-  std:: cout<< " Taxes : $ "<< std::setprecision(2) << std::fixed<<taxes <<std::endl;
+  tip = ( tipPercentage / 100) * mealCost;
+  std:: cout<< "Taxes: $"<< std::setprecision(2) << std::fixed<<taxes <<std::endl;
 
-  std::cout<< " Tip : $ " << std::setprecision(2) << std::fixed<<tip <<std::endl;
+  std::cout<<"Tip: $" << std::setprecision(2) << std::fixed<< tip <<std::endl;
   
 std::cout<< "=========\n";
-result = tip + taxes + mealCost;
-std::cout<< " total "<< result <<std::endl;
+total = tip + taxes + mealCost;
+std::cout<< "Total:$"<< total <<std::endl;
 return 0;
 }
